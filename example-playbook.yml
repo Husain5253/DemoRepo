@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Installing nginx
+      apt:
+         name: nginx
+         state: latest
+    - name: Starting service
+      service:
+         name: nginx
+         state: started      
