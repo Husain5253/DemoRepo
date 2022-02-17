@@ -1,0 +1,13 @@
+pipeline{
+    
+    agent any
+    stages{
+        stage("Running Ansible Playbook"){
+            steps{
+                sh example-playbook.yml
+            }
+        }
+        
+    }
+    
+}
