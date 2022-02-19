@@ -1,0 +1,15 @@
+---
+- hosts: localhost
+  become: true
+  tasks:
+    - name: Creating new Directory
+      file:
+         dest: /home/devh/19feb-dir
+         state: directory
+      tags: dir
+    - name: Creating new File
+      file:
+         dest: /home/devh/19feb-file.txt
+         state: touch
+      tags: file      
+
